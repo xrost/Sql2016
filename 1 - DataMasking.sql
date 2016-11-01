@@ -17,4 +17,10 @@ SELECT USER_NAME()
 
 SELECT * FROM Users
 
+DROP TABLE IF EXISTS #UserCopy
+
+SELECT * INTO #UserCopy FROM Users
+
+SELECT * FROM #UserCopy
+
 
