@@ -25,3 +25,5 @@ GO
 SELECT * FROM Users
 
 EXEC sp_set_session_context @key='cid', @value=1
+
+SELECT SESSION_CONTEXT(N'cid'); 
