@@ -23,7 +23,8 @@ WITH (STATE = ON)
 GO
 
 SELECT * FROM Users
+SELECT COUNT(1) FROM Users
 
-EXEC sp_set_session_context @key='cid', @value=1
+EXEC sp_set_session_context @key='cid', @value=3
 
 SELECT SESSION_CONTEXT(N'cid'); 
