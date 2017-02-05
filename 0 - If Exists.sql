@@ -6,6 +6,7 @@ CREATE TABLE #temp
 	name NVARCHAR(25)
 )
 
+SELECT * FROM #temp
 
 DROP TABLE IF EXISTS #temp
 
