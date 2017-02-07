@@ -22,8 +22,16 @@ ADD FILTER PREDICATE Security.EntitlementCheck(ClientId) ON dbo.Users
 WITH (STATE = ON)
 GO
 
+ALTER SECURITY POLICY EntitlementPolicy WITH (STATE = ON)
+GO
+
 SELECT * FROM Users
 SELECT COUNT(1) FROM Users
+
+BEGIN TRANSACTION 
+--DELETE TOP (10) FROM Users WHERE ClientId = 3
+UPDATE Users SET Password = 'HACK' WHERE ClientId = 1
+ROLLBACK
 
 EXEC sp_set_session_context @key='cid', @value=3
 
