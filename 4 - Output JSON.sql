@@ -5,7 +5,7 @@ SELECT
 	users.LastName	
 FROM Clients Clients
 JOIN Users Users ON clients.ClientId = users.ClientId
-ORDER BY
+ORDER BY -- ORDER IMPORTANT
 	Clients.ClientId
 FOR JSON AUTO
 GO
